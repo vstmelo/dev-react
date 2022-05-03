@@ -18,7 +18,6 @@ export default function Header() {
         <NavItem style={{marginTop: "auto"}}>
           <InputGroup>
             <FormControl placeholder="Pesquisar" />
-            <InputGroup><Icon path={mdiMagnifyPlusOutline} color="white"/></InputGroup>
           </InputGroup>
         </NavItem>
       </Navbar>
