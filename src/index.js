@@ -1,26 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// Páginas 
-import ListagemGit from './presentation/view/ListagemGit/ListagemGit';
+// Páginas
+import ListagemGit from "./presentation/view/Listagem/ListagemGit";
 
-
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// importante adicionar para o react-bootstrap funcionar
 import 'bootstrap/dist/css/bootstrap.min.css';
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+  );
 
-
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={ListagemGit} />
-
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<ListagemGit/>} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
 );
-
